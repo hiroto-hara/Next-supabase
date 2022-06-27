@@ -1,4 +1,4 @@
-import create from 'zustand/react'
+import create from 'zustand'
 import { EditedNotice, EditedTask } from './types/types'
 
 type State = {
