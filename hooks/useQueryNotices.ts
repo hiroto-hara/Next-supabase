@@ -14,7 +14,7 @@ export const useQueryNotices = () => {
     return data
   }
   return useQuery<Notice[], Error>({
-    queryKey: 'todos',
+    queryKey: 'notices',
     queryFn: getNotices,
     staleTime: 0,
     refetchOnWindowFocus: true,
