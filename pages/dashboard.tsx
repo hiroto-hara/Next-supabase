@@ -22,7 +22,20 @@ const Dashboard: NextPage = () => {
   }
   return (
     <Layout title="Dashboard">
-      <LogoutIcon
+      <div className="w-1/2 bg-sky-300">
+        <TaskForm />
+        <TaskList />
+        <LogoutIcon
+          className="mb-6 h-6 w-6 cursor-pointer text-blue-500"
+          onClick={signOut}
+        />
+      </div>
+      <div className="w-1/2 bg-sky-100">
+        <NoticeForm />
+        <NoticeList />
+      </div>
+
+      {/* <LogoutIcon
         className="mb-6 h-6 w-6 cursor-pointer text-blue-500"
         onClick={signOut}
       />
@@ -41,7 +54,7 @@ const Dashboard: NextPage = () => {
           <NoticeForm />
           <NoticeList />
         </div>
-      </div>
+      </div> */}
     </Layout>
   )
 }

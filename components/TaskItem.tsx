@@ -12,7 +12,7 @@ export const TaskItem: FC<Omit<Task, 'created_at' | 'user_id'>> = ({
   const { deleteTaskMutation } = useMutateTask()
 
   return (
-    <li className="my-3 text-lg font-extrabold">
+    <li className="my-3 mx-3 rounded-md border border-sky-500 py-1 px-2">
       <span>{title}</span>
       <div className="float-right ml-20 flex">
         <PencilAltIcon

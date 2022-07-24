@@ -9,7 +9,7 @@ export const TaskList: FC = () => {
   if (status === 'loading') return <Spinner />
   if (status === 'error') return <p>{'Error'}</p>
   return (
-    <ul className="my-2">
+    <ul className="my-2 ">
       {tasks?.map((task) => (
         <TaskItem key={task.id} id={task.id} title={task.title} />
       ))}
