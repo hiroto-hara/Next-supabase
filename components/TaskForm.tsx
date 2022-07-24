@@ -25,7 +25,7 @@ export const TaskForm: FC = () => {
     <form onSubmit={submitHandler}>
       <input
         type="text"
-        className="my-2 rounded border border-gray-300 px-3 py-2 text-sm  placeholder-gray-500 focus:border-indigo-500 focus:outline-none"
+        className="mt-3 ml-3 rounded border border-gray-300 px-3 py-2 text-sm  placeholder-gray-500 focus:border-indigo-500 focus:outline-none"
         placeholder="New task ?"
         value={editedTask.title}
         onChange={(e) => update({ ...editedTask, title: e.target.value })}

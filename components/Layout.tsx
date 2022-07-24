@@ -5,20 +5,19 @@ import { BadgeCheckIcon } from '@heroicons/react/solid'
 type Title = {
   title: string
   children: ReactNode
+  header?: ReactNode
 }
 
-export const Layout: FC<Title> = ({ children, title = 'Todo app' }) => {
+export const Layout: FC<Title> = ({ header, children, title = 'Todo app' }) => {
   return (
-    <div className="flex min-h-screen flex-col items-center justify-center font-mono text-gray-800">
+    <div className="font-mono text-gray-800">
       <Head>
         <title>{title}</title>
       </Head>
-      <header></header>
-      <main className="flex w-screen flex-1 flex-col items-center justify-center">
-        {children}
-      </main>
-      <footer className="flex h-12 w-full items-center justify-center border-t">
-        <BadgeCheckIcon className="h-6 w-6 text-blue-500" />
+      <header className="h-24 h-24 w-full bg-sky-500">{header}</header>
+      <main className="flex h-screen w-full justify-between">{children}</main>
+      <footer className="flex h-24 w-full items-center justify-center border-t bg-sky-500">
+        <BadgeCheckIcon className="h-12 w-12 text-blue-500" />
       </footer>
     </div>
   )
